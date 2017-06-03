@@ -1,0 +1,10 @@
+/*Load external fonts - not working*/
+
+@font-face {
+    font-family: Source Sans Pro;
+    src: url(SourceSansPro-Regular.tff);
+}
+
+div {
+    font-family: Source Sans Pro;
+}

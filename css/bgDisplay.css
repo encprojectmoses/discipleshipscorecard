@@ -1,0 +1,19 @@
+body
+{
+	height: auto; 
+	width: auto;
+	background: linear-gradient(to top right, #20457e, #487ed0);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+div.fixWorldMap /* For centering the background "World Map" */
+{
+	height: auto;
+	width: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}

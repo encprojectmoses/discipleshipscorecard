@@ -1,0 +1,94 @@
+<!--********************************************
+*Discipleship Scorecard - Quarterly Report     *
+*											   * 
+*											   * 
+* Baseline: monthlyReport.html        			   *
+*											   * 
+* Author: Carlo Fonclara					   *
+* Edited by: Jonas Fabrero (11/04/2016)		   *
+* Date: 10/25/2016							   *
+*											   * 
+*											   * 
+************************************************
+*	Revision		By			Date		   *
+*	#001			CF			10/25/2016	   *
+************************************************
+ -->
+
+<html>
+	<head>
+		<title>Discipleship Scorecard | Create a Quarterly Report</title>
+
+		<script src="..\js\inputNumOnly.js"></script>
+	</head>
+
+	<body>
+
+		<div align="center">
+			<table width="100%" cellpadding="2">
+				<tr>
+					<td align="center" colspan="2">
+						<font style="font-family: 'Source Sans Pro'; font-size: 20px; color: #f0f0f0;">Date:</font>
+								<select name="selectMonth" style="font-family: 'Source Sans Pro'; font-size: 15px; border: 0px; border-radius: 5px; padding-left: 2px; padding-right: 2px; height: 25px; width: 250px;">
+								  	<option value="" selected>Choose a Quarter..</option>
+								  	<option value="1st">[1st Quarter] January - March</option>
+								  	<option value="2nd">[2nd Quarter] April - June</option>
+								  	<option value="3rd">[3rd Quarter] July - September</option>
+								  	<option value="4th">[4th Quarter] October - December</option>
+								</select>
+						
+								<select name="selectYear" style="font-family: 'Source Sans Pro'; font-size: 15px; border: 0px; border-radius: 5px; padding-left: 2px; padding-right: 2px; height: 25px; width: 70px;">
+								  	<option value="2014">2014</option>
+								  	<option value="2015">2015</option>
+								  	<option value="2016">2016</option>
+								  	<option value="2017">2017</option>
+								  	<option value="2018">2018</option>
+								  	<option value="2019">2019</option>
+								  	<option value="2020">2020</option>
+								</select>
+					</td>
+				</tr>
+				<tr style="height: 5px;">
+					<!-- SPACES BETWEEN 2 TABLES -->
+				</tr>
+				<tr>
+					<td align="center">
+						<font style="font-family: 'Source Sans Pro'; font-size: 20px; color: #f0f0f0;">Coach:</font>
+						<input type="text" style="font-family: 'Source Sans Pro'; font-weight: 600; font-size: 15; height: 30px; width: 50px; border-radius: 5px; text-align: center;" onkeypress="return isNumber(event)" maxlength="4" required/>
+					</td>
+				</tr>
+				<tr>
+					<td align="center">
+						<font style="font-family: 'Source Sans Pro'; font-size: 20px; color: #f0f0f0;">Victory Group Leaders:</font>
+						<input type="text" style="font-family: 'Source Sans Pro'; font-weight: 600; font-size: 15; height: 30px; width: 50px; border-radius: 5px; text-align: center;" onkeypress="return isNumber(event)" maxlength="4" required/>
+					</td>
+				</tr>
+				<tr>
+					<td align="center">
+						<font style="font-family: 'Source Sans Pro'; font-size: 20px; color: #f0f0f0;">Victory Group Members:</font>
+						<input type="text" style="font-family: 'Source Sans Pro'; font-weight: 600; font-size: 15; height: 30px; width: 50px; border-radius: 5px; text-align: center;" onkeypress="return isNumber(event)" maxlength="4" required/>
+					</td>
+				</tr>
+				<tr>
+					<td align="center">
+						<font style="font-family: 'Source Sans Pro'; font-size: 20px; color: #f0f0f0;">Victory Groups:</font>
+						<input type="text" style="font-family: 'Source Sans Pro'; font-weight: 600; font-size: 15; height: 30px; width: 50px; border-radius: 5px; text-align: center;" onkeypress="return isNumber(event)" maxlength="4" required/>
+					</td>
+				</tr>
+				<tr style="height: 5px;">
+					<!-- SPACES BETWEEN 2 TABLES -->
+				</tr>
+				<tr>
+					<td colspan="2">
+						<center>
+							<input type="button" value="Submit a Report" id="submit" onclick="#" style="font-size: 16px; height: 35px; width: 150px; border-radius: 5px; border: 2px solid #f0f0f0; background-color: #2980b9; color: #f0f0f0;" />
+						</center>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+	</body>
+
+</html>
+

@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<title>Discipleship Scorecard | Login</title>
+
+
+		<link rel="stylesheet" type="text/css" href="..\css\bgDisplay.css">
+		<link rel="stylesheet" type="text/css" href="..\css\loginStyle.css">
+		<script src="..\js\loginValidate.js"></script>
+		<script src="..\js\jquery-3.2.1.min.js"></script>
+
+	</head>
+	 
+	<body bgcolor="black">
+		<div class="fixWorldMap">
+			<img src="..\images\worldmap-fx.png" width="100%"/>
+		</div>
+
+		<div class="loginContainer">
+			<table>
+				<tr>
+					<td width="450">
+						<center>
+							<img src="..\images\DSLogo-02-1.png" width="100%"/>
+						</center>
+					</td>
+
+					<td width="300">
+
+						<form id="form_id" method="post" name="myForm">
+							<center>
+
+								<div id="alertValidation" class="labelAlertValidation" style="position: relative; top: 20px; ">
+								<!-- This is where you put "Login failed! Please try again." or "Please enter your username and password." -->
+								</div> 
+
+								<div style="position: relative; top: 45px;">
+									<input type="text" name="username" id="username" value="moses" onkeypress="return validate(event)" style="font-size: 18px; height: 40px; width: 225px; background-color: #f5f5f5; padding-left: 8px; padding-right: 8px; border: 2px solid gray; border-radius: 5px;" placeholder="username" required/>
+								</div>
+
+								<div style="position: relative; top: 50px;">
+									<input type="password" name="password" id="password" value="moses" onkeypress="return validate(event)" style="font-size: 18px; height: 40px; width: 225px; background-color: #f5f5f5; padding-left: 8px; padding-right: 8px; border: 2px solid gray; border-radius: 5px;" placeholder="password" required/>
+								</div>
+
+								<div style="position: relative; top: 60px;">
+									<input type="button" value="Login" id="submit" onclick="validate()" style="font-size: 16px; height: 35px; width: 80px; border-radius: 5px; border: 2px solid #f0f0f0; background-color: #2980b9; color: #f0f0f0;" />
+								</div>
+							</center>
+						</form>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+	</body>
+
+
+</html>
+

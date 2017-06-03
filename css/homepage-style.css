@@ -1,0 +1,9 @@
+div.homepageContainer /* For centering the homepage */
+{
+	width: 90%;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}

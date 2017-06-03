@@ -1,0 +1,128 @@
+<html>
+	<head>
+		<title>Discipleship Scorecard | Create a Monthly Report</title>
+
+		<script src="..\js\inputNumOnly.js"></script>
+		<script src="..\js\textArea1000char.js"></script>
+
+	</head>
+
+	<body>
+
+		<div align="center">
+			<table width="100%" cellpadding="2">
+				<tr>
+					<td align="center" colspan="2">
+						<font style="font-family: 'Source Sans Pro'; font-size: 20px; color: #f0f0f0;">Date:</font>
+								<select name="selectMonth" style="font-family: 'Source Sans Pro'; font-size: 15px; border: 0px; border-radius: 5px; padding-left: 2px; padding-right: 2px; height: 25px; width: 100px;">
+								  	<option value="1">January</option>
+								  	<option value="2">February</option>
+								  	<option value="3">March</option>
+								  	<option value="4">April</option>
+								  	<option value="5">May</option>
+								  	<option value="6">June</option>
+								  	<option value="7">July</option>
+								  	<option value="8">August</option>
+								  	<option value="9">September</option>
+								  	<option value="10">October</option>
+								  	<option value="11">November</option>
+								  	<option value="12">December</option>
+								</select>
+						
+								<select name="selectYear" style="font-family: 'Source Sans Pro'; font-size: 15px; border: 0px; border-radius: 5px; padding-left: 2px; padding-right: 2px; height: 25px; width: 70px;">
+								  	<option value="2014">2014</option>
+								  	<option value="2015">2015</option>
+								  	<option value="2016">2016</option>
+								  	<option value="2017">2017</option>
+								  	<option value="2018">2018</option>
+								  	<option value="2019">2019</option>
+								  	<option value="2020">2020</option>
+								</select>
+					</td>
+				</tr>
+				<tr>
+					<td align="center" colspan="2">
+						<font style="font-family: 'Source Sans Pro'; font-size: 20px; color: #f0f0f0;">Youth Service Attendance:</font>
+						<input type="text" style="font-family: 'Source Sans Pro'; font-weight: 600; font-size: 15; height: 30px; width: 50px; border-radius: 5px; text-align: center;" onkeypress="return isNumber(event)" maxlength="4">
+					</td>
+				</tr>
+				<tr>
+					<td align="center" colspan="2">
+						<font style="font-family: 'Source Sans Pro'; font-size: 20px; color: #f0f0f0;">Total Number of Envelope Count:</font>
+						<input type="text" style="font-family: 'Source Sans Pro'; font-weight: 600; font-size: 15; height: 30px; width: 50px; border-radius: 5px; text-align: center;" onkeypress="return isNumber(event)" maxlength="4">
+					</td>
+				</tr>
+				<tr style="height: 20px;">
+					<!-- SPACES BETWEEN 2 TABLES -->
+				</tr>
+				<tr>
+					<td>
+						<div style="position: fixed;">
+							<font style="font-family: 'Source Sans Pro'; font-weight: 600; font-size: 18px; color: #f0f0f0;">Salvation Story</font>
+						</div>
+						<div align="right">
+							<input type="text" style="font-family: 'Source Sans Pro'; font-size: 14; border: none; background-color: transparent; color: #f0f0f0; height: 15px; width: 40px; text-align: right; font-style: italic;" id='forSVStory' name="forSVStory" maxlength="4" value="1000" readonly/>
+							<font style="font-family: 'Source Sans Pro'; font-size: 14px; color: #f0f0f0;"><i>characters left</i></font>
+						</div>	
+					</td>
+					<td>
+						<div style="position: fixed;">
+							<font style="font-family: 'Source Sans Pro'; font-weight: 600; font-size: 18px; color: #f0f0f0;">Evangelism Story</font>
+						</div>
+						<div align="right">
+							<input type="text" style="font-family: 'Source Sans Pro'; font-size: 14; border: none; background-color: transparent; color: #f0f0f0; height: 15px; width: 40px; text-align: right; font-style: italic;" id='forEVStory' name="forEVStory" maxlength="4" value="1000" readonly/>
+							<font style="font-family: 'Source Sans Pro'; font-size: 14px; color: #f0f0f0;"><i>characters left</i></font>
+						</div>	
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<textarea style="height: 200px; width: 100%; font-family: 'Source Sans Pro'; font-size: 15; padding-top: 5px; padding-left: 5px; padding-right: 5px; padding-bottom: 5px; resize: none;" onKeyDown="textCounter(this, 1000);" onKeyUp="textCounter(this,'forSVStory' ,1000)" name="forSVStory" id="forSVStory" maxlength="1000"></textarea>
+					</td>
+					<td>
+						<textarea style="height: 200px; width: 100%; font-family: 'Source Sans Pro'; font-size: 15; padding-top: 5px; padding-left: 5px; padding-right: 5px; padding-bottom: 5px; resize: none;" onKeyDown="textCounter(this, 1000);" onKeyUp="textCounter(this,'forEVStory' ,1000)" name="forEVStory" id="forEVStory" maxlength="1000"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div style="position: fixed;">
+							<font style="font-family: 'Source Sans Pro'; font-weight: 600; font-size: 16px; color: #f0f0f0;">New Victory Weekend Story</font>
+						</div>
+						<div align="right">
+							<input type="text" style="font-family: 'Source Sans Pro'; font-size: 14; border: none; background-color: transparent; color: #f0f0f0; height: 15px; width: 40px; text-align: right; font-style: italic;" id='forNVWStory' name="forNVWStory" maxlength="4" value="1000" readonly/>
+							<font style="font-family: 'Source Sans Pro'; font-size: 14px; color: #f0f0f0;"><i>characters left</i></font>
+						</div>	
+					</td>
+					<td>
+						<div style="position: fixed;">
+							<font style="font-family: 'Source Sans Pro'; font-weight: 600; font-size: 17px; color: #f0f0f0;">New Victory Group Leader Story</font>
+						</div>
+						<div align="right">
+							<input type="text" style="font-family: 'Source Sans Pro'; font-size: 14; border: none; background-color: transparent; color: #f0f0f0; height: 15px; width: 40px; text-align: right; font-style: italic;" id='forNVGLStory' name="forNVGLStory" maxlength="4" value="1000" readonly/>
+							<font style="font-family: 'Source Sans Pro'; font-size: 14px; color: #f0f0f0;"><i>characters left</i></font>
+						</div>	
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<textarea style="height: 200px; width: 100%; font-family: 'Source Sans Pro'; font-size: 15; padding-top: 5px; padding-left: 5px; padding-right: 5px; padding-bottom: 5px; resize: none;" onKeyDown="textCounter(this, 1000);" onKeyUp="textCounter(this,'forNVWStory' ,1000)" name="forNVWStory" id="forSVStory" maxlength="1000"></textarea>
+					</td>
+					<td>
+						<textarea style="height: 200px; width: 100%; font-family: 'Source Sans Pro'; font-size: 15; padding-top: 5px; padding-left: 5px; padding-right: 5px; padding-bottom: 5px; resize: none;" onKeyDown="textCounter(this, 1000);" onKeyUp="textCounter(this,'forNVGLStory' ,1000)" name="forNVGLStory" id="forNVGLStory" maxlength="1000"></textarea>
+					</td>
+				</tr>
+				<tr style="height: 5px;">
+					<!-- SPACES BETWEEN 2 TABLES -->
+				</tr>
+				<tr>
+					<td colspan="2">
+						<center>
+							<input type="button" value="Submit a Report" id="submit" onclick="#" style="font-size: 16px; height: 35px; width: 150px; border-radius: 5px; border: 2px solid #f0f0f0; background-color: #2980b9; color: #f0f0f0;" />
+						</center>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+	</body>
+</html>

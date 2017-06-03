@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<title>Discipleship Scorecard | Home</title>
+
+		<link rel="stylesheet" type="text/css" href="..\css\bgDisplay.css">
+		<link rel="stylesheet" type="text/css" href="..\css\navBar-Homepage.css">  
+		<link rel="stylesheet" type="text/css" href="..\css\homepage-style.css">
+
+		<script src="..\js\fullsize-iframe.js"></script>
+	</head>
+
+		<body>
+
+			<div align="center" style="position: relative; top: 25%;">
+				<iframe src="dashboard.html" id="iFrame-Homepage" name="iFrame-Homepage" width="91%" height="900"></iframe>
+			</div>
+
+
+			<div class="homepageContainer">
+				<table>
+						<tr>
+							<td width="20%">
+								<center>
+									<img src="..\images\DSLogo-02-1.png" width="100%" style="position: relative;"/>
+								</center>
+							</td>
+							<td width="70%" valign="bottom">
+								<font style="font-family:'Source Sans Pro'; font-size: 15px;">
+								<ul>
+								    <li><a class="active" href="#home">Home</a></li>
+								    <li class="dropdown">
+									    <a href="#" class="dropbtn">Reports</a>
+										    <div class="dropdown-content">
+											    <a href="iframeCreateReport.html" target="iFrame-Homepage" name="createRPT" onclick="document.title='Discipleship Scorecard | Create A Report';">Create a Report</a> <!-- Calling the iframe_createReport.html -->
+											    <a href="iframeViewReport.html" target="iFrame-Homepage" onclick="document.title='Discipleship Scorecard | View Reports';">View Reports</a> <!-- Calling the iframe_createReport.html -->
+										    </div>
+								    </li>
+									<li><a class="account" href="#">Welcome, Jonas!</a></li>
+								</ul>
+							</td>
+						</tr>
+				</table>
+			</div>
+
+
+		</body>
+
+
+</html>
+
