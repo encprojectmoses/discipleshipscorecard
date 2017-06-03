@@ -7,6 +7,16 @@
 		<link rel="stylesheet" type="text/css" href="..\css\loginStyle.css">
 		<script src="..\js\loginValidate.js"></script>
 		<script src="..\js\jquery-3.2.1.min.js"></script>
+		<script src="..\js\js.cookie.js"></script>
+		<script src="..\js\commonDefine.js"></script>
+
+		<script>
+			window.onpageshow = function(){
+				//TODO create common method to reset cookies
+				Cookies.remove(COOKIE_USER_ID);
+			};
+
+		</script>
 
 	</head>
 	 
@@ -34,11 +44,11 @@
 								</div> 
 
 								<div style="position: relative; top: 45px;">
-									<input type="text" name="username" id="username" value="moses" onkeypress="return validate(event)" style="font-size: 18px; height: 40px; width: 225px; background-color: #f5f5f5; padding-left: 8px; padding-right: 8px; border: 2px solid gray; border-radius: 5px;" placeholder="username" required/>
+									<input type="text" name="username" id="username" onkeypress="return validate(event)" style="font-size: 18px; height: 40px; width: 225px; background-color: #f5f5f5; padding-left: 8px; padding-right: 8px; border: 2px solid gray; border-radius: 5px;" placeholder="username" required/>
 								</div>
 
 								<div style="position: relative; top: 50px;">
-									<input type="password" name="password" id="password" value="moses" onkeypress="return validate(event)" style="font-size: 18px; height: 40px; width: 225px; background-color: #f5f5f5; padding-left: 8px; padding-right: 8px; border: 2px solid gray; border-radius: 5px;" placeholder="password" required/>
+									<input type="password" name="password" id="password" onkeypress="return validate(event)" style="font-size: 18px; height: 40px; width: 225px; background-color: #f5f5f5; padding-left: 8px; padding-right: 8px; border: 2px solid gray; border-radius: 5px;" placeholder="password" required/>
 								</div>
 
 								<div style="position: relative; top: 60px;">
