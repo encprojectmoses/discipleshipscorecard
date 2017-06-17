@@ -1,4 +1,6 @@
 <?php
+	include 'connectionStart.php';
+	
 	class Data {
 		public $result = -1;
 		public $userInfo;
@@ -9,23 +11,15 @@
 		public $userName  = "";
 	}
 
-	$servername = "localhost";
-	$username = "root";
-	$password = "";
-	$dbname = "dscorecard";
 
-	// Create connection
-	$conn = new mysqli($servername, $username, $password, $dbname);
+	$password=md5($_POST["password"]);
 
-	// Check connection
-	if ($conn->connect_error) {
-	    die("Connection failed: " . $conn->connect_error);
-	}
-
-	$sql = "SELECT * FROM user WHERE username = '".$_POST["username"]."' AND password = '".$_POST["password"]."';";
+	$sql = "SELECT * FROM user WHERE username = '".$_POST["username"]."' AND password = '".$password."';";
 	$result = $conn->query($sql);
 
-	//var_dump($conn);
+	/*var_dump($password);
+	var_dump($sql);
+	var_dump($result);*/
 
 	$data = new Data();
 	if ($result->num_rows > 0) {
