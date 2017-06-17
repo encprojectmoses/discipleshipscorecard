@@ -10,6 +10,7 @@
 		<script src="..\js\jquery-3.2.1.min.js"></script>
 		<script src="..\js\js.cookie.js"></script>
 		<script src="..\js\commonDefine.js"></script>
+		<script src="..\js\common.js"></script>
 		<script src="..\js\logout.js"></script>
 
 		<script>
@@ -18,6 +19,8 @@
 				{
 					window.location = "login.html";
 				}
+
+				initCommon();
 			};
 
 		</script>
@@ -26,7 +29,6 @@
 		<body>
 
 			<div align="center" style="position: relative; top: 25%;">
-				<iframe src="dashboard.html" id="iFrame-Homepage" name="iFrame-Homepage" width="91%" height="900"></iframe>
 			</div>
 
 
@@ -42,14 +44,8 @@
 								<font style="font-family:'Source Sans Pro'; font-size: 15px;">
 								<ul>
 								    <li><a class="active" href="#home">Home</a></li>
-								    <li class="dropdown">
-									    <a href="#" class="dropbtn">Reports</a>
-										    <div class="dropdown-content">
-											    <a href="iframeCreateReport.html" target="iFrame-Homepage" name="createRPT" onclick="document.title='Discipleship Scorecard | Create A Report';">Create a Report</a> <!-- Calling the iframe_createReport.html -->
-											    <a href="iframeViewReport.html" target="iFrame-Homepage" onclick="document.title='Discipleship Scorecard | View Reports';">View Reports</a> <!-- Calling the iframe_createReport.html -->
-										    </div>
-								    </li>
-									<li><a class="account" href="#">Welcome!</a></li>
+								    <li><a class="account" href="#">Monthly</a></li>
+									<li><a id="welcomeUser" class="account" href="#">Welcome Reports!</a></li>
 									<li><a class="account" href="#" onclick="logout();" >Logout</a></li>
 								</ul>
 							</td>

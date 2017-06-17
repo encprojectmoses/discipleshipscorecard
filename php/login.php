@@ -4,6 +4,7 @@
 	class Data {
 		public $result = -1;
 		public $userInfo;
+		public $firstName;
 	 }
 
 	class UserInfo {
@@ -29,6 +30,7 @@
 	    $data->userInfo = new UserInfo();
 	    $data->userInfo->userId = $row["id"];
 	    $data->userInfo->userName = $row["username"];
+	    $data->userInfo->firstName = $row["firstname"];
 	    echo json_encode($data);
 
 	} else {

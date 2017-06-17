@@ -30,6 +30,7 @@ function validate(e)
 				    if(data.result == 1)
 				    {
 				    	Cookies.set(COOKIE_USER_ID, data.userInfo.userId);
+				    	Cookies.set(COOKIE_FIRST_NAME, data.userInfo.firstName);
 				    	window.location = "homepage.html";
 				    }else
 				    {
