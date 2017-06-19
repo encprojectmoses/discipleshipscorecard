@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<meta charset="ISO-8859-1">
+<title>Add/Edit Monthly Report</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+	
+	<br/>
+	<div class="container">
+	
+	<!-- Date -->
+	<div class="form-group row">
+			<form class="form-inline">
+				<div class="col-sm-2">
+					<label for="input_date_month">Date:</label>
+				</div>
+				
+				<label class="sr-only" for="input_date_month">Month</label>
+				
+				<div class="col-sm-2">
+					<select class="form-control" id="input_date_month">
+						<option selected> Choose Month...</option>
+						<option value="January">January</option>
+						<option value="February">February</option>
+						<option value="March">March</option>
+						<option value="April">April</option>
+						<option value="May">May</option>
+						<option value="June">June</option>
+						<option value="July">July</option>
+						<option value="August">August</option>
+						<option value="September">September</option>
+						<option value="October">October</option>
+						<option value="November">November</option>
+						<option value="December">December</option>
+					</select>
+				</div>
+				
+				<label class="sr-only" for="input_date_year">Year</label>
+		
+				<div class="col-sm-2">
+					<!-- TODO: Make year dynamic -->
+					<select class="form-control" id="input_date_year">
+						<option selected> Choose Year...</option>
+						<option value="2017">2013</option>
+						<option value="2018">2014</option>
+						<option value="2019">2015</option>
+						<option value="2020">2016</option>
+						<option value="2021">2017</option>
+						<option value="2022">2018</option>
+						<option value="2023">2019</option>
+						<option value="2024">2020</option>
+						<option value="2025">2021</option>
+						<option value="2026">2022</option>
+						<option value="2027">2023</option>
+					</select>
+				</div>
+			</form>
+	</div>
+ 	
+ 	<br/>
+ 	
+ 	<!-- Youth Service Attendance -->
+ 	<form>
+	 	<div class="form-group row">
+	 		<div class="col-sm-2">	
+	 			<label for="youth_service_attendance" class="col-2 col-form-label">Youth Service Attendance:</label>		
+	 		</div>	
+	 		<div class="col-sm-1">		
+	 			<input class="form-control" type="number" id="youth_service_attendance"></input>
+	 		</div>
+	 	</div>
+ 	
+ 	<!-- Average TNO Envelope Count -->
+	 	<div class="form-group row">
+	 		<div class="col-sm-2">	
+	 			<label for="ave_tno_count" class="col-2 col-form-label">Average TNO Envelope Count:</label>	
+	 		</div>
+	 		<div class="col-sm-1">
+	 			<input class="form-control" type="number" id="ave_tno_count"></input>
+	 		</div>
+	 	</div>
+ 	</form>
+ 	
+ 	
+ 	<!-- Tabular Form -->
+	<div class="row">
+		<div class="col-md-7">
+			<div class="panel with-nav-tabs panel-default">
+				
+				<div class="panel-heading">
+						<ul class="nav nav-tabs">
+							<li class="active"><a data-toogle="tab">Campus Outreach Story</a></li>
+							<li><a data-toogle="tab">Student Discipleship</a></li>
+							<li><a data-toogle="tab">Leadership Development</a></li>
+						</ul>
+				</div>
+				
+				<!-- TODO: Enable other tabs -->
+				<div class="panel-body">
+					<div class="tab-content">
+						
+						<!-- Dropdown for Classification -->
+						<div class="form-group row">
+							<div class="col-sm-4">
+								<select class="form-control" id="input_date_month">
+									<option selected>Choose Classication..</option>
+									<option value="Salvation">Salvation</option>
+									<option value="Evangelism">Evangelism</option>
+									<option value="Social Responsibility">Social Responsibility</option>
+									<option value="Campus Saturation">Campus Saturation</option>
+									<option value="Campus Expansion">Campus Expansion</option>
+									<option value="Others">Others</option>
+								</select>
+							</div>
+						</div>
+						
+						<div class="tab-pane fade in active" id="campus_outreach_tab">
+							<label for="campus_outreach_textarea">Story:</label>
+   							<textarea class="form-control" id="campus_outreach_textarea" rows="10"></textarea>
+						</div>
+						
+						<!-- Dropdown for Classification -->
+						<!-- <div class="form-group row">
+							<div class="col-sm-4">
+								<select class="form-control" id="input_date_month">
+									<option selected>Choose Classication..</option>
+									<option value="Salvation">Salvation</option>
+									<option value="Evangelism">Evangelism</option>
+									<option value="Social Responsibility">Social Responsibility</option>
+									<option value="Campus Saturation">Campus Saturation</option>
+									<option value="Campus Expansion">Campus Expansion</option>
+									<option value="Others">Others</option>
+								</select>
+							</div>
+						</div> -->
+						
+						<div class="tab-pane fade" id="student_leadership_tab">
+							<label for="student_leadership_textarea">Story:</label>
+   							<textarea class="form-control" id="student_leadership_textarea" rows="10"></textarea>
+						</div>
+						
+						<!-- Dropdown for Classification -->
+						<!-- <div class="form-group row">
+							<div class="col-sm-4">
+								<select class="form-control" id="input_date_month">
+									<option selected>Choose Classication..</option>
+									<option value="Salvation">Salvation</option>
+									<option value="Evangelism">Evangelism</option>
+									<option value="Social Responsibility">Social Responsibility</option>
+									<option value="Campus Saturation">Campus Saturation</option>
+									<option value="Campus Expansion">Campus Expansion</option>
+									<option value="Others">Others</option>
+								</select>
+							</div>
+						</div> -->
+						
+						<div class="tab-pane fade" id="leadership_development_tab">
+							<label for="leadership_development_textarea">Story:</label>
+   							<textarea class="form-control" id="leadership_development_textarea" rows="10"></textarea>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+	<div>
+ 	
+ 	
+	</div>
+	
+</body>
+</html>
