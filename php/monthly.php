@@ -28,8 +28,8 @@
 	}
 
 	
-	$userId = 3;//TODO pass as parameter id of createdBy
-	$monthYear = 2017;//TODO pass as parameter id of createdBy
+	$userId = $_POST["userId"];
+	$monthYear = $_POST["monthYear"];
 
 	$sql = "SELECT * FROM monthly WHERE created_by = ".$userId." AND month_year = ".$monthYear." ORDER BY month_report ASC;";
 	$result = $conn->query($sql);
@@ -49,7 +49,8 @@
 	    while($row = $result->fetch_assoc()) {
 	    	$monthlyReport = new MonthlyReport();
 	    	$monthlyReport->id = $row["id"];
-			$monthlyReport->monthReport = $row["month_report"];
+			$monthlyReport->monthReport = date("F", mktime(0, 0, 0, (int)$row["month_report"], 10));
+			/*$monthlyReport->monthReport = $row["month_report"];*/
 			$monthlyReport->monthYear = $row["month_year"];
 			$monthlyReport->youthServiceAttendance = $row["youth_service_attendance"];
 			$monthlyReport->tnoEnvelope = $row["tno_envelope"];
@@ -75,5 +76,6 @@
 	    echo json_encode($data);
 	}
 	$conn->close();
+
 
 ?>

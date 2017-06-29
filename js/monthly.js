@@ -14,12 +14,32 @@ function getMonthlyReports()
 		 data: values,
 		 cache: false,
 		 success: function(data) {
-		    console.log("monthly#data"+data);
 		 	var data = $.parseJSON(data); //convert the string result to JSON object
 		    if(data.result == 1)
 		    {
 		    	console.log("monthly#success");
-		    	//TODO dynamic creation of table
+
+		    	initMonthNameSort();
+
+		    	var table = $('#monthlyReports').DataTable( {
+		    		"lengthChange": false,
+		    		"paging": false,
+		    		"info": false,
+		    		"columnDefs": [
+				       { type: 'date-range', targets: 0 }
+				    ],
+			        data: data.items,
+			         "columns": [
+			            { "data": "monthReport" },
+			            { "data": "youthServiceAttendance" },
+			            { "data": "tnoEnvelope" }
+			        ]
+			    } );
+
+			    $('#monthlyReports tbody').on('click', 'tr', function () {
+			        var data = table.row( this ).data();
+			        console.log("click#data: "+JSON.stringify(data));
+			    } );
 		    }else
 		    {
 		    	console.log("monthly#error handling");
