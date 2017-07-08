@@ -34,16 +34,10 @@
 	$sql = "SELECT * FROM monthly WHERE created_by = ".$userId." AND month_year = ".$monthYear." ORDER BY month_report ASC;";
 	$result = $conn->query($sql);
 
-	/*var_dump($sql);
-	var_dump($result);*/
-	/*var_dump($password);
-	var_dump($sql);
-	var_dump($result);*/
-
 	$data = new Data();
+	$data->result = 1;
+	$data->items = array();
 	if ($result->num_rows > 0) {
-		$data->result = 1;
-	    $data->items = array();
 
 	    // output data of each row
 	    while($row = $result->fetch_assoc()) {
@@ -70,11 +64,9 @@
 	    	array_push($data->items, $monthlyReport);
 
 	    }
-	    echo json_encode($data);
-
-	} else {
-	    echo json_encode($data);
 	}
+
+	echo json_encode($data);
 	$conn->close();
 
 

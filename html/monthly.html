@@ -13,9 +13,13 @@
 		<script src="..\js\common.js"></script>
 		<script src="..\js\logout.js"></script>
 		<script src="..\js\monthly.js"></script>
+		<script src="..\js\deleteMonthly.js"></script>
 
 		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/r/bs-3.3.5/jq-2.1.4,dt-1.10.8/datatables.min.css"/>
 		<script type="text/javascript" src="https://cdn.datatables.net/r/bs-3.3.5/jqc-1.11.3,dt-1.10.8/datatables.min.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.7/css/bootstrap-dialog.min.css"/>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.7/js/bootstrap-dialog.min.js"></script>
 
 		<script>
 			window.onpageshow = function(){
@@ -86,13 +90,9 @@
 					<input type="submit" value="Create Report" id="createreportbtn" name="createreportbtn" style="font-size: 16px; height: 35px; width: 125px; border-radius: 5px; border: 2px solid #f0f0f0; background-color: #1c79af; color: #f0f0f0;" />
 				</div>
 
-				<form action="deletemonthly.php" method="POST"> <!-- "Delete Report" -->
-					<input type="text" value="<?php echo $callMonthYear; ?>"" name="getMonthyear" hidden/>
-
-					<div style="position: absolute; right: 7%">
-					<input type="submit" value="Delete Report" id="deletereportbtn" name="deletereportbtn" style="font-size: 16px; height: 35px; width: 125px; border-radius: 5px; border: 2px solid #f0f0f0; background-color: #c8293c; color: #f0f0f0;" />
-					</div>
-				</form>
+				<div style="position: absolute; right: 7%">
+					<input type="button" value="Delete Report" id="deletereportbtn" name="deletereportbtn" onclick="onDeleteMonthly();"style="font-size: 16px; height: 35px; width: 125px; border-radius: 5px; border: 2px solid #f0f0f0; background-color: #c8293c; color: #f0f0f0;" />
+				</div>
 
 				<form action="editMonthly.php" method="POST" autocomplete="off"> <!-- "Edit Report" -->
 					<div style="position: absolute; right: 16.8%">
@@ -108,6 +108,7 @@
 				<table id="monthlyReports" class="table table-striped table-bordered">
 					 <thead>
 			            <tr>
+			            	 <th><input type="checkbox" name="select_all" value="1" id="select-all"></th>
 			                <th>Month</th>
 			                <th>Youth Service Attendance</th>
 			                <th>TNO Envelope</th>
