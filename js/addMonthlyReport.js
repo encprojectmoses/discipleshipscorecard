@@ -6,6 +6,11 @@ var selectedYear = 				"";
 var youthServiceAttendance = 	0;
 var aveTnoCount = 				0;
 
+function openAddReport()
+{
+	window.location.href = "http://localhost/discipleshipscorecard/html/addEditMonthly.html";
+}
+
 function getSelectedMonth(month)
 {
 	if(month != 'Choose Month...')
