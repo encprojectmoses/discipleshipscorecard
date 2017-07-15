@@ -1,4 +1,4 @@
-ul {
+ul.navigation {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -6,11 +6,11 @@ ul {
     background-color: #3d5577;
 }
 
-li {
+li.navigation {
     float: left;
 }
 
-li a, .dropbtn {
+li.navigation a, .dropbtn {
     display: inline-block;
     color: white;
     text-align: center;
@@ -18,7 +18,7 @@ li a, .dropbtn {
     text-decoration: none;
 }
 
-li a:hover:not(.active) {
+li.navigation a:hover:not(.active) {
     background-color: #376cac;
 }
 
@@ -26,7 +26,7 @@ li a:hover:not(.active) {
     background-color: #2a7bdf;
 }
 
-li.dropdown {
+li.navigation.dropdown {
     display: inline-block;
 }
 
