@@ -7,6 +7,7 @@
 		<link rel="stylesheet" type="text/css" href="..\css\addMonthlyReport.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		
+		<script src="..\js\addMonthlyReport.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		
@@ -25,10 +26,9 @@
 	<div id="createMonthlyForm" class="container">
 	<!-- Date -->
 	
-		<div class="form-group row">
-				<form class="form-inline">
+				<div class="form-group row">
 					<div class="col-sm-1">
-						<label id="input_date_label" for="input_date_month">Date:</label>
+						<label id="input_date_label" for="input_date_month">Month and Year:</label>
 					</div>
 					
 					<label class="sr-only" for="input_date_month">Month</label>
@@ -70,8 +70,7 @@
 							<option value="2023">2023</option>
 						</select>
 					</div>
-				</form>
-		</div>
+				</div>
  	
  	<br/>
  	
@@ -98,92 +97,42 @@
 	 	</form>
  	
  	
- 	<!-- Tabular Form -->
-		<div class="row">
-			<div class="col-md-7">
-				<div class="panel with-nav-tabs panel-default">
-					
-					<div class="panel-heading">
-							<ul class="nav nav-tabs">
-								<li class="active"><a data-toogle="tab">Campus Outreach Story</a></li>
-								<li><a data-toogle="tab">Student Discipleship</a></li>
-								<li><a data-toogle="tab">Leadership Development</a></li>
-							</ul>
+ 	<!-- Start - Panels -->
+		<div id="monthly_tabs" class="row" class="panel with-nav-tabs panel-default">
+			<div class="panel-heading">
+				<ul class ="nav nav-tabs">
+					<li class="active">
+						<a href="#campus_outreach_tab" data-toogle="tab" onclick="$(this).tab('show')">Campus Outreach Story</a>
+					</li>
+					<li>
+						<a href="#student_leadership_tab" data-toogle="tab" onclick="$(this).tab('show')">Student Discipleship</a>
+					</li>
+					<li>
+						<a href="#leadership_development_tab" data-toogle="tab" onclick="$(this).tab('show')">Leadership Development</a>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="panel-body">
+				<div class="tab-content">
+					<div class="tab-pane active" id="campus_outreach_tab">
+						<textarea class="form-control" id="campus_outreach_textarea" rows="10" placeholder="Write campus outreach story"></textarea>
 					</div>
-					
-					<!-- TODO: Enable other tabs -->
-					<div class="panel-body">
-						<div class="tab-content">
-							
-							<!-- Dropdown for Classification -->
-							<div class="form-group row">
-								<div class="col-sm-4">
-									<select class="form-control" id="input_date_month">
-										<option selected>Choose Classication..</option>
-										<option value="Salvation">Salvation</option>
-										<option value="Evangelism">Evangelism</option>
-										<option value="Social Responsibility">Social Responsibility</option>
-										<option value="Campus Saturation">Campus Saturation</option>
-										<option value="Campus Expansion">Campus Expansion</option>
-										<option value="Others">Others</option>
-									</select>
-								</div>
-							</div>
-							
-							<div class="tab-pane fade in active" id="campus_outreach_tab">
-								<label for="campus_outreach_textarea">Story:</label>
-	   							<textarea class="form-control" id="campus_outreach_textarea" rows="10"></textarea>
-							</div>
-							
-							<!-- Dropdown for Classification -->
-							<!-- <div class="form-group row">
-								<div class="col-sm-4">
-									<select class="form-control" id="input_date_month">
-										<option selected>Choose Classication..</option>
-										<option value="Salvation">Salvation</option>
-										<option value="Evangelism">Evangelism</option>
-										<option value="Social Responsibility">Social Responsibility</option>
-										<option value="Campus Saturation">Campus Saturation</option>
-										<option value="Campus Expansion">Campus Expansion</option>
-										<option value="Others">Others</option>
-									</select>
-								</div>
-							</div> -->
-							
-							<div class="tab-pane fade" id="student_leadership_tab">
-								<label for="student_leadership_textarea">Story:</label>
-	   							<textarea class="form-control" id="student_leadership_textarea" rows="10"></textarea>
-							</div>
-							
-							<!-- Dropdown for Classification -->
-							<!-- <div class="form-group row">
-								<div class="col-sm-4">
-									<select class="form-control" id="input_date_month">
-										<option selected>Choose Classication..</option>
-										<option value="Salvation">Salvation</option>
-										<option value="Evangelism">Evangelism</option>
-										<option value="Social Responsibility">Social Responsibility</option>
-										<option value="Campus Saturation">Campus Saturation</option>
-										<option value="Campus Expansion">Campus Expansion</option>
-										<option value="Others">Others</option>
-									</select>
-								</div>
-							</div> -->
-							
-							<div class="tab-pane fade" id="leadership_development_tab">
-								<label for="leadership_development_textarea">Story:</label>
-	   							<textarea class="form-control" id="leadership_development_textarea" rows="10"></textarea>
-							</div>
-						</div>
-					</div>	
+					<div class="tab-pane" id="student_leadership_tab" class="tab-pane fade in">
+						<textarea class="form-control" id="student_leadership_textarea" rows="10" placeholder="Write student leadership story"></textarea>
+					</div>
+					<div class="tab-pane" id="leadership_development_tab" class="tab-pane fade in">
+						<textarea class="form-control" id="leadership_development_textarea" rows="10" placeholder="Write leadership development story"></textarea>
+					</div>
 				</div>
 			</div>
-		<div>
-  </div>
-  
-  </div>
+			
+			
+		</div>
+	<!-- End - Panels -->
   
   </div>
 	<!-- End of Create Monthly  -->
+	
 </body>
 </html>
