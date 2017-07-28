@@ -11,13 +11,14 @@ function openAddReport()
 	window.location.href = "http://localhost/discipleshipscorecard/html/addEditMonthly.html";
 }
 
-function selectedMonth(month)
+function selectMonth(month)
 {
 	if(month != 'Choose Month...')
 		selectedMonth = $("#input_date_month").find("option:selected").text();
+	alert(selectedMonth);
 }
 
-function selectedYear(year)
+function selectYear(year)
 {
 	if(year != 'Choose Year...')
 		selectedYear = $("#input_date_year").find("option:selected").text();
@@ -36,15 +37,3 @@ function setAveTnoCount(value)
 }
 
 //TODO: Form Validation - Mandatory Fields
-
-function submitMonthlyReport()
-{
-	//No validation yet
-	document.getElementById("createMonthlyForm").submit();
-	alert(" Month : " + selectedMonth + 
-			"\n Year : " + selectedYear + " " +
-			"\n Form Id : " + youthServiceAttendance +
-			"\n TNO Count : " + aveTnoCount +
-			"\n\n Form Submitted Successfully......");
-	
-}

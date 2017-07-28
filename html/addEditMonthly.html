@@ -32,8 +32,8 @@
 						
 						<label class="sr-only" for="input_date_month">Month</label>
 					
-						<div class="col-sm-2" onchange="selectedMonth(this)">
-							<select class="form-control" id="input_date_month">
+						<div class="col-sm-2">
+							<select class="form-control" id="input_date_month" onchange="selectMonth(this.value)">
 								<option selected> Choose Month...</option>
 								<option value="January">January</option>
 								<option value="February">February</option>
@@ -132,7 +132,7 @@
 					<!-- End - Panels -->
 	
 					<!-- Submit Button -->	
-				    <button id="submitMonthly" type="submit" class="btn btn-primary" onclick="submitMonthlyReport()">Submit</button>
+				    <button id="submitMonthly" type="submit" class="btn btn-primary submitbutton" onsubmit="submitMonthlyReport()">Submit</button>
   
   </div>
   <!-- End of Create Monthly  -->
