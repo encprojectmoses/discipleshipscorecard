@@ -86,3 +86,8 @@ function getMonthlyReports()
 		 },
 	 });
 }
+
+function openAddReport() 
+{
+	window.location.href = "/discipleshipscorecard/html/addEditMonthly.html";
+}

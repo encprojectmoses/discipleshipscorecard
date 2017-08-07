@@ -54,7 +54,7 @@
 			
 						<div class="col-sm-2">
 							<!-- TODO: Make year dynamic -->
-							<select class="form-control" id="input_date_year">
+							<select class="form-control" id="input_date_year" onchange="selectYear(this.value)">
 								<option selected> Choose Year...</option>
 								<option value="2013">2013</option>
 								<option value="2014">2014</option>
@@ -80,7 +80,7 @@
 					 			<label id="youth_service_label" for="youth_service_attendance" class="col-2 col-form-label">Youth Service Attendance:</label>		
 					 		</div>	
 					 		<div class="col-sm-1">		
-					 			<input class="form-control" type="number" id="youth_service_attendance"></input>
+					 			<input class="form-control" type="number" id="youth_service_attendance" onchange="setYouthServiceAttendance(this.value)"></input>
 					 		</div>
 					 	</div>
 	 	
@@ -90,7 +90,7 @@
 						 			<label id="ave_tno_label" for="ave_tno_count" class="col-2 col-form-label">Average TNO Envelope Count:</label>	
 						 		</div>
 						 		<div class="col-sm-1">
-						 			<input class="form-control" type="number" id="ave_tno_count"></input>
+						 			<input class="form-control" type="number" id="ave_tno_count"  onchange="setAveTnoCount(this.value)"></input>
 						 		</div>
 						 	</div>
 					 	</form>
@@ -131,8 +131,10 @@
 						</div>
 					<!-- End - Panels -->
 	
-					<!-- Submit Button -->	
-				    <button id="submitMonthly" type="submit" class="btn btn-primary submitbutton" onsubmit="submitMonthlyReport()">Submit</button>
+					<!-- Submit Button -->
+					<div>	
+				    <button id="submitbutton" type="submit" class="btn btn-primary submitbutton">Submit</button>
+				    </div>
   
   </div>
   <!-- End of Create Monthly  -->
