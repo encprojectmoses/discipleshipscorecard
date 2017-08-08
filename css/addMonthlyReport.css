@@ -13,9 +13,15 @@
 {
 	color: white;
 }
+
 #ave_tno_label
 {
 	color: white;
+}
+
+#other_campus_outreach_title
+{
+	float: left;
 }
 
 textarea#campus_outreach_textarea
