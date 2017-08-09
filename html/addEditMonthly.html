@@ -116,30 +116,30 @@
 								<div class="tab-content">
 									<div class="tab-pane active" id="campus_outreach_tab">
 										
-										<div class="col-sm-3">
-											<select class="form-control" id="campus_outreach_story_other_title">
-												<option selected>Choose Title...</option>
-												<option value="Salvation">Salvation</option>
-												<option value="Evangelism">Evangelism</option>
-												<option value="Social Responsibility">Social Responsibility</option>
-												<option value="Campus Saturation">Campus Saturation</option>
-												<option value="Campus Expansion">Campus Expansion</option>
-												<option value="Other">Other</option>
-											</select>
+											<span class="col-sm-3" >
+												<select class="form-control" id="campus_outreach_story_other_title" onchange="otherValueIsSelected(this.value);">
+													<option selected>Choose Title...</option>
+													<option value="Salvation">Salvation</option>
+													<option value="Evangelism">Evangelism</option>
+													<option value="Social Responsibility">Social Responsibility</option>
+													<option value="Campus Saturation">Campus Saturation</option>
+													<option value="Campus Expansion">Campus Expansion</option>
+													<option value="Other">Other</option>
+												</select>
+											</span>
 											
-											<input class="form-control" type="text" id="other_campus_outreach_title"></input>
+											<span id="other_campus_outreach_span" class="col-sm-3" >
+												<input class="form-control" type="text" id="other_campus_outreach_title"></input>
+											</span>
 											
-										</div>
-
-										<div class="col-sm-10">
-											<textarea class="form-control" id="campus_outreach_textarea" rows="10" 
+											<div class="col-sm-10">
+												<textarea class="form-control" id="campus_outreach_textarea" rows="10" 
 														maxlength="1000" placeholder="Write campus outreach story"></textarea>
-										</div>
-									
+											</div>
+										
 									</div>
 									
-									
-									<!-- Salvation, Victory Weekend, Discipleship Trainings, Other  -->
+									<!-- Salvation, Victory Weekend, Discipleship Trainings, Other -->
 									<div class="tab-pane" id="student_leadership_tab" class="tab-pane fade in">
 										<textarea class="form-control" id="student_leadership_textarea" rows="10" 
 													maxlength="1000" placeholder="Write student leadership story"></textarea>

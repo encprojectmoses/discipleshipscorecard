@@ -5,6 +5,7 @@ var selectedMonth = 			"";
 var selectedYear = 				"";
 var youthServiceAttendance = 	0;
 var aveTnoCount = 				0;
+var campusTitle	= 				"";
 
 function selectMonth(month){
 	if(month != 'Choose Month...')
@@ -26,14 +27,18 @@ function setAveTnoCount(value){
 		aveTnoCount = document.getElementById("ave_tno_count").value;
 }
 
-function isOtherSelected(value)
+function otherValueIsSelected(value)
 {
-	if(value != "Other")
-		document.getElementById("").style.visibility="hidden";  
+	if(value == "Other"){
+		$('#other_campus_outreach_span').show();
+	}else{
+		$('#other_campus_outreach_span').hide();
+		
+	}
 		
 }
 
-function convertFormContentToJson(user)
+/*function convertFormContentToJson(user)
 {
 	var campus_story = $('#campus_outreach_textarea').val();
 	var student_story = $('#student_leadership_textarea').val();
@@ -58,7 +63,7 @@ function convertFormContentToJson(user)
 	};
 	
 	return jsonData;
-}
+}*/
 
 function submitButton(){
 	
