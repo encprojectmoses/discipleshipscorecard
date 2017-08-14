@@ -33,9 +33,7 @@ function otherValueIsSelected(value)
 		$('#other_campus_outreach_span').show();
 	}else{
 		$('#other_campus_outreach_span').hide();
-		
-	}
-		
+	}		
 }
 
 /*function convertFormContentToJson(user)

@@ -41,8 +41,3 @@ textarea#leadership_development_textarea
 	width: 750px;
 	border: 3px solid #cccccc;
 }
-
-span + span
-{
-    padding-bottom: 10px;
-}
