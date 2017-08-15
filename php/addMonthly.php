@@ -5,5 +5,4 @@
         public $result = -1;
     }
     
-    
 ?>

@@ -4,40 +4,24 @@
     padding: 250px 0px 0px 500px;
 }
 
-#input_date_label
-{
-	color: white;
-}
-
+#input_date_label,
+#ave_tno_label,
 #youth_service_label
 {
 	color: white;
 }
 
-#ave_tno_label
-{
-	color: white;
-}
-
-#other_campus_outreach_title
-{
-	float: left;
-}
-
+textarea#student_leadership_textarea,
+textarea#leadership_development_textarea,
 textarea#campus_outreach_textarea
 {
 	width: 750px;
 	border: 3px solid #cccccc;
 }
 
-textarea#student_leadership_textarea
+div#campus_other,
+div#leadership_other,
+div#student_other
 {
-	width: 750px;
-	border: 3px solid #cccccc;
-}
-
-textarea#leadership_development_textarea
-{
-	width: 750px;
-	border: 3px solid #cccccc;
+	margin-bottom: 10px;
 }

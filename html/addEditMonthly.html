@@ -117,12 +117,12 @@
 								<div class="tab-content">
 									<div class="tab-pane active" id="campus_outreach_tab">
 										
-												<div class="row" class="col-sm-3">
+												<div class="row" class="col-sm-3" id="campus_other">
 													<div class="col-sm-3" >
 														<select class="form-control" id="campus_outreach_story_other_title" onchange="otherValueIsSelected(this.value);">
 															<option selected>Choose Title...</option>
 															<option value="Salvation">Salvation</option>
-															<option value="Evangelism">Evangelism</option>
+															<option value="Evangelism">Evan gelism</option>
 															<option value="Social Responsibility">Social Responsibility</option>
 															<option value="Campus Saturation">Campus Saturation</option>
 															<option value="Campus Expansion">Campus Expansion</option>
@@ -131,7 +131,7 @@
 												 	</div> 
 	
 													 <div class="col-sm-3" id="other_campus_outreach_span"> 
-															<input class="form-control" type="text" id="other_campus_outreach_title"></input>
+															<input class="form-control" type="hidden" id="other_campus_outreach_title"></input>
 													 </div>
 													 
 												</div>
@@ -147,15 +147,64 @@
 									
 									<!-- Salvation, Victory Weekend, Discipleship Trainings, Other -->
 									<div class="tab-pane" id="student_leadership_tab" class="tab-pane fade in">
-										<textarea class="form-control" id="student_leadership_textarea" rows="10" 
-													maxlength="1000" placeholder="Write student leadership story"></textarea>
+									
+										<div class="row" class="col-sm-3" id="student_other">
+													<div class="col-sm-3" >
+														<select class="form-control" id="student_leadership_story_other_title" onchange="otherValueIsSelected(this.value);">
+															<option selected>Choose Title...</option>
+															<option value="Salvation">Salvation</option>
+															<option value="Evangelism">Evan gelism</option>
+															<option value="Social Responsibility">Social Responsibility</option>
+															<option value="Campus Saturation">Campus Saturation</option>
+															<option value="Campus Expansion">Campus Expansion</option>
+															<option value="Other">Other</option>
+														</select>
+												 	</div> 
+	
+													 <div class="col-sm-3" id="other_student_leadership_span"> 
+															<input class="form-control" type="hidden" id="student_leadership_title"></input>
+													 </div>
+													 
+												</div>
+												
+												<div class="row">
+													<div class="col-sm-10">
+														<textarea class="form-control" id="student_leadership_textarea" rows="10" 
+															maxlength="1000" placeholder="Write student leadership story"></textarea>
+													</div>
+												</div>
+												
 									</div>
 									
 									
 									<!-- Intern, New Victory Group Leader, New Campus Missionary, Other  -->
 									<div class="tab-pane" id="leadership_development_tab" class="tab-pane fade in">
-										<textarea class="form-control" id="leadership_development_textarea" rows="10" 
-													maxlength="1000" placeholder="Write leadership development story"></textarea>
+										
+										<div class="row" class="col-sm-3" id="leadership_other">
+											<div class="col-sm-3" >
+														<select class="form-control" id="leadership_development_other_title" onchange="otherValueIsSelected(this.value);">
+															<option selected>Choose Title...</option>
+															<option value="Salvation">Salvation</option>
+															<option value="Evangelism">Evan gelism</option>
+															<option value="Social Responsibility">Social Responsibility</option>
+															<option value="Campus Saturation">Campus Saturation</option>
+															<option value="Campus Expansion">Campus Expansion</option>
+															<option value="Other">Other</option>
+														</select>
+												 	</div> 
+	
+													 <div class="col-sm-3" id="other_leadership_development_span"> 
+															<input class="form-control" type="hidden" id="leadership_development_title"></input>
+													 </div>
+													 
+												</div>
+												
+												<div class="row">
+													<div class="col-sm-10">
+														<textarea class="form-control" id="leadership_development_textarea" rows="10" 
+															maxlength="1000" placeholder="Write leadership development story"></textarea>
+													</div>
+												</div>		
 									</div>
 								</div>
 							</div>

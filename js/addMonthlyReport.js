@@ -30,9 +30,13 @@ function setAveTnoCount(value){
 function otherValueIsSelected(value)
 {
 	if(value == "Other"){
-		$('#other_campus_outreach_span').show();
+		document.getElementById('#other_campus_outreach_span').type = 'text';
+		document.getElementById('#other_campus_outreach_span').style.visibility = 'visible';
+		/*$('#other_campus_outreach_span').show();*/
 	}else{
-		$('#other_campus_outreach_span').hide();
+		document.getElementById('#other_campus_outreach_span').type = 'hidden';
+		document.getElementById('#other_campus_outreach_span').style.visibility = 'hidden';
+		/*$('#other_campus_outreach_span').hide();*/
 	}		
 }
 
