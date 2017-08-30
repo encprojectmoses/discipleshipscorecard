@@ -1,13 +1,20 @@
 /**
  *	@author Tonnie Valencia
  */
-var selectedMonth = 			"";
-var selectedYear = 				"";
-var youthServiceAttendance = 	0;
-var aveTnoCount = 				0;
-var campusTitle	= 				"";
-var studentTitle = 				"";
-var leaderTitle = 				"";
+var selectedMonth = "";
+var selectedYear = "";
+var youthServiceAttendance = 0;
+var aveTnoCount = 0;
+var campusTitle	= "";
+var studentTitle = "";
+var leaderTitle = "";
+var leadershipDevStory = document.getElementById("leadership_development_textarea").value;
+var studentLeadershipStory = document.getElementById("student_leadership_textarea").value;
+var campusOutreachStory = document.getElementById("campus_outreach_textarea").value;
+var otherCampusTitle = document.getElementById("other_campus_outreach_title").value;
+var otherStudentTitle = document.getElementById("other_student_outreach_title").value;
+var otherLeaderDevTitle = document.getElementById("leadership_development_title").value;
+var createdDate = 
 
 function selectMonth(month){
 	if(month != 'Choose Month...')
@@ -52,12 +59,13 @@ function setLeaderStoryTitle(value){
 }
 
 function submit(){
-	//Checking test
 	/*alert("selectedMonth: " + selectedMonth + "\n" +
 			"selectedYear: " + selectedYear + "\n" +
 			"youthServiceAttendance: " + youthServiceAttendance + "\n" +
 			"aveTnoCount: " + aveTnoCount + "\n" +
-			"campusTitle: " + campusTitle);*/
+			"campusTitle: " + campusTitle  + "\n" +
+			"studentTitle: " + studentTitle  + "\n" +
+			"leaderTitle: " + leaderTitle);*/
 	
 	var values = $("#monthlyForm").serialize();
 	$.ajax({
@@ -66,7 +74,7 @@ function submit(){
 		 data: values,
 		 cache: false,
 		 success: function(data) {
-		    console.log("addMonthly#data"+ data);
+		    console.log("addMonthly#data" + data);
 		 	var data = $.parseJSON(data); //convert the string result to JSON object
 		 },
 	 });
