@@ -58,4 +58,18 @@ function submit(){
 			"youthServiceAttendance: " + youthServiceAttendance + "\n" +
 			"aveTnoCount: " + aveTnoCount + "\n" +
 			"campusTitle: " + campusTitle);*/
+	
+	var values = $("#monthlyForm").serialize();
+	$.ajax({
+		 type: 'POST',
+		 url: '../php/addMonthly.php',
+		 data: values,
+		 cache: false,
+		 success: function(data) {
+		    console.log("addMonthly#data"+ data);
+		 	var data = $.parseJSON(data); //convert the string result to JSON object
+		 },
+	 });
+
+	return false;
 }
