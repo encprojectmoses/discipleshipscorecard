@@ -116,13 +116,12 @@
 							<div class="panel-body">
 								<div class="tab-content">
 									<div class="tab-pane active" id="campus_outreach_tab">
-										
 												<div class="row" class="col-sm-3" id="campus_other">
 													<div class="col-sm-3" >
-														<select class="form-control" id="campus_outreach_story_other_title" onchange="otherValueIsSelected(this.value);">
+														<select class="form-control" id="campus_outreach_story_other_title" onchange="setCampusStoryTitle(this.value)">
 															<option selected>Choose Title...</option>
 															<option value="Salvation">Salvation</option>
-															<option value="Evangelism">Evan gelism</option>
+															<option value="Evangelism">Evangelism</option>
 															<option value="Social Responsibility">Social Responsibility</option>
 															<option value="Campus Saturation">Campus Saturation</option>
 															<option value="Campus Expansion">Campus Expansion</option>
@@ -130,8 +129,8 @@
 														</select>
 												 	</div> 
 	
-													 <div class="col-sm-3" id="other_campus_outreach_span"> 
-															<input class="form-control" type="hidden" id="other_campus_outreach_title"></input>
+													 <div class="col-sm-3" id="other_campus_outreach_input"> 
+														 <input class="form-control" type="text" id="other_campus_outreach_title"></input>
 													 </div>
 													 
 												</div>
@@ -148,12 +147,12 @@
 									<!-- Salvation, Victory Weekend, Discipleship Trainings, Other -->
 									<div class="tab-pane" id="student_leadership_tab" class="tab-pane fade in">
 									
-										<div class="row" class="col-sm-3" id="student_other">
+												<div class="row" class="col-sm-3" id="student_other">
 													<div class="col-sm-3" >
-														<select class="form-control" id="student_leadership_story_other_title" onchange="otherValueIsSelected(this.value);">
+														<select class="form-control" id="student_leadership_story_other_title" onchange="setStudentStoryTitle(this.value)">
 															<option selected>Choose Title...</option>
 															<option value="Salvation">Salvation</option>
-															<option value="Evangelism">Evan gelism</option>
+															<option value="Evangelism">Evangelism</option>
 															<option value="Social Responsibility">Social Responsibility</option>
 															<option value="Campus Saturation">Campus Saturation</option>
 															<option value="Campus Expansion">Campus Expansion</option>
@@ -161,8 +160,8 @@
 														</select>
 												 	</div> 
 	
-													 <div class="col-sm-3" id="other_student_leadership_span"> 
-															<input class="form-control" type="hidden" id="student_leadership_title"></input>
+													 <div class="col-sm-3" id="other_student_leadership_input"> 
+															<input class="form-control" type="text" id="other_student_outreach_title"></input>
 													 </div>
 													 
 												</div>
@@ -181,11 +180,11 @@
 									<div class="tab-pane" id="leadership_development_tab" class="tab-pane fade in">
 										
 										<div class="row" class="col-sm-3" id="leadership_other">
-											<div class="col-sm-3" >
-														<select class="form-control" id="leadership_development_other_title" onchange="otherValueIsSelected(this.value);">
+													<div class="col-sm-3" >
+														<select class="form-control" id="leadership_development_other_title" onchange="setLeaderStoryTitle(this.value)">
 															<option selected>Choose Title...</option>
 															<option value="Salvation">Salvation</option>
-															<option value="Evangelism">Evan gelism</option>
+															<option value="Evangelism">Evangelism</option>
 															<option value="Social Responsibility">Social Responsibility</option>
 															<option value="Campus Saturation">Campus Saturation</option>
 															<option value="Campus Expansion">Campus Expansion</option>
@@ -193,8 +192,8 @@
 														</select>
 												 	</div> 
 	
-													 <div class="col-sm-3" id="other_leadership_development_span"> 
-															<input class="form-control" type="hidden" id="leadership_development_title"></input>
+													 <div class="col-sm-3" id="other_leadership_development_input"> 
+															<input class="form-control" type="text" id="leadership_development_title"></input>
 													 </div>
 													 
 												</div>
@@ -213,7 +212,7 @@
 	
 					<!-- Submit Button -->
 					<div>	
-				    <button id="submitbutton" type="submit" class="btn btn-primary submitbutton" onclick="submitButton();">Submit</button>
+				    <button id="submitbutton" type="submit" class="btn btn-primary submitbutton" onclick="submit()">Submit</button>
 				    </div>
   
   </div>

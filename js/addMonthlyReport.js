@@ -6,6 +6,8 @@ var selectedYear = 				"";
 var youthServiceAttendance = 	0;
 var aveTnoCount = 				0;
 var campusTitle	= 				"";
+var studentTitle = 				"";
+var leaderTitle = 				"";
 
 function selectMonth(month){
 	if(month != 'Choose Month...')
@@ -27,57 +29,33 @@ function setAveTnoCount(value){
 		aveTnoCount = document.getElementById("ave_tno_count").value;
 }
 
-function otherValueIsSelected(value)
-{
+function setCampusStoryTitle(value){
+	if(value != 'Choose Title...')
+		campusTitle = $("#campus_outreach_story_other_title").find("option:selected").text();
+
 	if(value == "Other"){
-		document.getElementById('#other_campus_outreach_span').type = 'text';
-		document.getElementById('#other_campus_outreach_span').style.visibility = 'visible';
-		/*$('#other_campus_outreach_span').show();*/
+		document.getElementById("other_campus_outreach_input").style.display="inline";
 	}else{
-		document.getElementById('#other_campus_outreach_span').type = 'hidden';
-		document.getElementById('#other_campus_outreach_span').style.visibility = 'hidden';
-		/*$('#other_campus_outreach_span').hide();*/
-	}		
+		document.getElementById("other_campus_outreach_input").style.display="none";
+	}
 }
 
-/*function convertFormContentToJson(user)
-{
-	var campus_story = $('#campus_outreach_textarea').val();
-	var student_story = $('#student_leadership_textarea').val();
-	var leader_story = $('#leadership_development_textarea').val();
-	
-	var jsonData = {
-		youth_service_attendance: youthServiceAttendance,
-		tno_envelope: aveTnoCount,
-		campus_outreach_story_classification: , 
-		campus_outreach_story_other_title: , 
-		campus_outreach_story: campus_story, 
-		student_discipleship_classification:, 
-		student_discipleship_other_title:, 
-		student_discipleship_story: student_story, 
-		leadership_development_classification:, 
-		leadership_development_other_title:, 
-		leadership_development_story: leader_story, 
-		created_by: user, 
-		created_date:, 
-		last_mod_date:,
-		month_report: selectedMonth + " " selectedYear,
-	};
-	
-	return jsonData;
-}*/
+function setLeaderStoryTitle(value){
+	if(value != 'Choose Title...')
+		leaderTitle = $("#leadership_development_other_title").find("option:selected").text();
 
-function submitButton(){
-	
-	/*$.ajax({
-		type: "POST",
-		url: "../php/addMonthly.php",
-		data: ,//how to get form here
-		cache: false,
-		success: function(){
-			
-		},
-			
-	});*/
+	if(value == "Other"){
+		document.getElementById("other_leadership_development_input").style.display="inline";
+	}else{
+		document.getElementById("other_leadership_development_input").style.display="none";
+	}
 }
-//TODO: Form Validation - Mandatory Fields
+
+function submit(){
+	//Checking test
+	/*alert("selectedMonth: " + selectedMonth + "\n" +
+			"selectedYear: " + selectedYear + "\n" +
+			"youthServiceAttendance: " + youthServiceAttendance + "\n" +
+			"aveTnoCount: " + aveTnoCount + "\n" +
+			"campusTitle: " + campusTitle);*/
+}

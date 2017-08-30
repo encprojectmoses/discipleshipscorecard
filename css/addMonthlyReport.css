@@ -25,3 +25,10 @@ div#student_other
 {
 	margin-bottom: 10px;
 }
+
+div#other_campus_outreach_input,
+div#other_student_leadership_input,
+div#other_leadership_development_input
+{
+	display: none;	
+}

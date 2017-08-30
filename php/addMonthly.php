@@ -4,5 +4,4 @@
     class Data {
         public $result = -1;
     }
-    
 ?>
