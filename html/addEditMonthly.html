@@ -34,7 +34,7 @@
 						<label class="sr-only" for="input_date_month">Month</label>
 					
 						<div class="col-sm-2">
-							<select class="form-control" id="input_date_month" onchange="selectMonth(this.value)">
+							<select class="form-control" id="input_date_month" name="input_date_month" onchange="selectMonth(this.value)">
 								<option selected> Choose Month...</option>
 								<option value="January">January</option>
 								<option value="February">February</option>
@@ -55,7 +55,7 @@
 			
 						<div class="col-sm-2">
 							<!-- TODO: Make year dynamic -->
-							<select class="form-control" id="input_date_year" onchange="selectYear(this.value)">
+							<select class="form-control" id="input_date_year" name = "input_date_year" onchange="selectYear(this.value)">
 								<option selected> Choose Year...</option>
 								<option value="2013">2013</option>
 								<option value="2014">2014</option>

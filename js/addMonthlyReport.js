@@ -14,7 +14,6 @@ var campusOutreachStory = document.getElementById("campus_outreach_textarea").va
 var otherCampusTitle = document.getElementById("other_campus_outreach_title").value;
 var otherStudentTitle = document.getElementById("other_student_outreach_title").value;
 var otherLeaderDevTitle = document.getElementById("leadership_development_title").value;
-var createdDate = 
 
 function selectMonth(month){
 	if(month != 'Choose Month...')

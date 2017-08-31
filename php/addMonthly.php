@@ -24,9 +24,10 @@ class UserInfo {
 	public $userName = "";
 }
 
-$createdByName = $_POST["username"];
-$selectedMonth = $_POST["selectedMonth"];
-$selectedYear = $_POST["selectedYear"];
+$id = Cookies.get(COOKIE_USER_ID);
+$createdByName = Cookies.get(COOKIE_FIRST_NAME);
+$selectedMonth = $_POST["input_date_month"];
+$selectedYear = $_POST["input_date_year"];
 $youthServiceAttendance = $_POST["youthServiceAttendance"];
 $aveTnoCount = $_POST["aveTnoCount"];
 $campusTitle = $_POST["campusTitle"];
@@ -38,6 +39,8 @@ $campusOutreachStory = $_POST["campusOutreachStory"];
 $otherCampusTitle = $_POST["otherCampusTitle"];
 $otherStudentTitle = $_POST["otherStudentTitle"];
 $otherLeaderDevTitle = $_POST["otherLeaderDevTitle"];
+date_default_timezone_set('Asia/Manila');
+$createDate = date('m/d/Y h:i:s a', time());
 
 $sql = "INSERT INTO monthly ('id',
 							'youth_service_attendance',
